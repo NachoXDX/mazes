@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 *{
     padding: 0px;
     margin: 0px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto', sans-serif;
+    --mainColor: #000000;
+    --secondColor: #fca311;
+    --thirdColor: #06A77D;
+    --textColor: white;
+
 }
 
 #top-div{
@@ -12,35 +19,50 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color: orange;
-    background: black;
+    color: var(--textColor);
+    background: var(--mainColor);
+}
+
+#top-div h1{
+    font-size: 4rem;
+    text-shadow: 5px 5px 10px black;
 }
 
 #params-div{
+    box-sizing: border-box;
     width: 100vw;
-    height: 15vh;
+    height: 5vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background: orange;
+    background: var(--secondColor);
+    border-bottom: black solid 0.3vh;
+    box-shadow: 20px 20px 100px orange;
 }
 #params-div input{
     width: 10%;
-    height: 20%;
-    border: white 1px solid;
-    background: black;
+    height: 80%;
+    border: black 1px solid;
+    background: var(--mainColor);
     border-radius: 5px ;
-    color: white;
-    text-align: center;
+    color: var(--textColor);
+    font-size: 1.3rem;
+    padding-left: 0.5%;
+    box-shadow: 1px 1px 10px black;
+}
+
+#params-div input:hover{
+    scale: 1.1;
 }
 
 #maze-div{
     background: black;
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
+    box-shadow: 20px 20px 100px orange;
 }
 #bot-div{
     height: 5vh;
@@ -48,13 +70,18 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: black;
+    background: var(--mainColor);
+    box-shadow: 20px 20px 100px orange;
 }
 #bot-div input{
-    background: orange;
+    background: var(--secondColor);
     border-radius: 5px ;
-    height: 90%;
-    width: 20%;
+    height: 80%;
+    width: 10%;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bolder;
+    box-shadow: 1px 1px 10px orange;
 }
 
 .row-div{
@@ -75,7 +102,7 @@
 }
 .maze-cell:focus{
     border: 0.5px black solid;
-    border:none
+    border:none;
     color:white;
     padding: 0px;
     scale: 1;

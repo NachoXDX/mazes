@@ -16,7 +16,9 @@ body.addEventListener("mouseup",()=>{
 })
 okBtn.addEventListener("click",()=>{
 
-    
+    while (mazeDiv.firstChild) {
+        mazeDiv.removeChild(mazeDiv.lastChild);
+      }
     
     for (let i = 0;i<parseInt(rows.value);i++){
         let arr = []
