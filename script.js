@@ -33,6 +33,7 @@ okBtn.addEventListener("click",()=>{
                 if(active){
                     if(cel.style.backgroundColor == "red"){
                         cel.style.backgroundColor = "grey"
+                        cel.style.border = "black 1px solid"
                     }
                     // else{
                     //     cel.style.backgroundColor = "grey"
@@ -49,9 +50,11 @@ okBtn.addEventListener("click",()=>{
             cel.addEventListener("mousedown",()=>{
                 if(cel.style.backgroundColor == "red"){
                     cel.style.backgroundColor = "grey"
+                    cel.style.border = "black 1px solid"
                 }
                 else if(cel.style.backgroundColor == "grey"){
                     cel.style.backgroundColor = "red"
+                    cel.style.border = "none"
                 }
             })
             // cel.addEventListener("click",()=>{
