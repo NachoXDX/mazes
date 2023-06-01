@@ -29,6 +29,7 @@ okBtn.addEventListener("click",()=>{
             cel.style.width = "100%"
             cel.style.height = "100%"
             cel.style.background = "red"
+            cel.style.boxSizing: "border-box"
             cel.addEventListener("mouseover",()=>{
                 if(active){
                     if(cel.style.backgroundColor == "red"){
