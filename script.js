@@ -19,9 +19,10 @@ okBtn.addEventListener("click",()=>{
     while (mazeDiv.firstChild) {
         mazeDiv.removeChild(mazeDiv.lastChild);
       }
-    
+    mazeRows = []
     for (let i = 0;i<parseInt(rows.value);i++){
         let arr = []
+        
         for(let j = 0;j<parseInt(cols.value);j++){
             let cel = document.createElement('input')
             cel.type = "text"
@@ -29,44 +30,29 @@ okBtn.addEventListener("click",()=>{
             cel.style.width = "100%"
             cel.style.height = "100%"
             cel.style.background = "red"
-            cel.style.boxSizing = "border-box"
+            
             cel.addEventListener("mouseover",()=>{
                 if(active){
                     if(cel.style.backgroundColor == "red"){
                         cel.style.backgroundColor = "grey"
-                        cel.style.border = "black 1px solid"
+                        
+                        
                     }
-                    // else{
-                    //     cel.style.backgroundColor = "grey"
-                    // }
-                    // if(cel.value == "G"){
-                    //     cel.style.backgroundColor = "yellow"
-                    // }
-                    // else if(cel.value == "S"){
-                    //     cel.style.backgroundColor = "green"
-                    // }
+                    
                 }
                     
             })
             cel.addEventListener("mousedown",()=>{
                 if(cel.style.backgroundColor == "red"){
                     cel.style.backgroundColor = "grey"
-                    cel.style.border = "black 1px solid"
+                    
                 }
                 else if(cel.style.backgroundColor == "grey"){
                     cel.style.backgroundColor = "red"
                     cel.style.border = "none"
                 }
             })
-            // cel.addEventListener("click",()=>{
-            //     if(cel.style.backgroundColor == "red"){
-            //         cel.style.backgroundColor = "grey"
-            //     }
-            //     else if(cel.style.backgroundColor == "grey"){
-            //         cel.style.backgroundColor = "red"
-            //     }
-                
-            // })
+   
             cel.addEventListener("change",()=>{
                 if(cel.value == "G"){
                     cel.style.backgroundColor = "yellow"

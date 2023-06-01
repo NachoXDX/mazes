@@ -25,7 +25,7 @@
 
 #top-div h1{
     font-size: 4rem;
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 5px 5px 50px orange;
 }
 
 #params-div{
@@ -71,7 +71,7 @@
     align-items: center;
     justify-content: space-around;
     background: var(--mainColor);
-    box-shadow: 20px 20px 100px orange;
+    /* box-shadow: 20px 20px 100px orange; */
 }
 #bot-div input{
     background: var(--secondColor);
@@ -94,10 +94,11 @@
 
 }
 .maze-cell{
-    border: 0.5px black solid;
+    box-sizing: border-box;
     border: none;
     text-align: center;
     font-size: 1.4rem;
+
     
 }
 .maze-cell:focus{
